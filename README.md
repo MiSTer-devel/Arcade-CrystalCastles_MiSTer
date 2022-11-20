@@ -1,13 +1,12 @@
 # Crystal Castles
 An FPGA implementation of the __Crystal Castles__ arcade hardware by __Atari__ for the MiSTer platform.
-<br>(work in progress)
 
 
 ## General Description
 Author: Enceladus<br>
 From: Atari 1983<br>
 Date: Aug-Nov 2022<br>
-Version: v1.0a (playable)<br>
+Version: playable<br>
 SDRAM: no<br>
 
 ## Info
