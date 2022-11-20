@@ -1,9 +1,8 @@
-# Crystal Castles
+# [Arcade: Crystal Castles](https://en.wikipedia.org/wiki/Crystal_Castles_(video_game)) for [MiSTer FPGA](https://mister-devel.github.io/MkDocs_MiSTer/)
 An FPGA implementation of the __Crystal Castles__ arcade hardware by __Atari__ for the MiSTer platform.
 
-
 ## General Description
-Author: Enceladus<br>
+Author: [Enceladus](https://github.com/0xECEAD)<br>
 From: Atari 1983<br>
 Date: Aug-Nov 2022<br>
 Version: playable<br>
@@ -35,7 +34,6 @@ USER_IN[4]=Horizontal Quadrature encoder A, USER_IN[5]=Horizontal Quadrature enc
 Emulation of a TrackBall is also provided for digital joystick, analog joystick or mouse. <br>
 You can set the sensitivity for your device in the OSD menu.
 
-
 ## Credits, acknowledgments, and thanks
 - [__Enceladus__](https://github.com/0xecead): Core design and implementation.
 - Original 6502 core by Arlet Ottens, 65C02 extensions by David Banks and Ed Spittles.
@@ -52,23 +50,20 @@ You can set the sensitivity for your device in the OSD menu.
 - 82S129 PROMs were replaced by their equivalent logic expressions.
 - Clock dividers were replaced with equivalent clock-enable signals. So the game clock (10MHz) only connects to clock inputs, and logic signals only connect to logic inputs (not clocks). This results in a cleaner FPGA synchronous design (citation needed).
 
-
-
-# Quartus Version
+## Quartus Version
 Cores must be developed in **Quartus v17.0.x**. It's recommended to have updates, so it will be **v17.0.2**. Newer versions won't give any benefits to FPGA used in MiSTer, however they will introduce incompatibilities in project settings and it will make harder to maintain the core and collaborate with others. **So please stick to good old 17.0.x version.** You may use either Lite or Standard license.
 
-# Attention
-ROMs are not included. In order to use this arcade, you need to provide the correct ROMs.
+## ROM Files Instructions
 
-To simplify the process .mra files are provided in the releases folder, that
-specifies the required ROMs with checksums. The ROMs .zip filename refers to the
-corresponding file of the M.A.M.E. project.
+ROMs are not included! In order to use this arcade core, you will need to provide the correct ROM file yourself.
 
-Please refer to https://github.com/MiSTer-devel/Main_MiSTer/wiki/Arcade-Roms for
-information on how to setup and use the environment.
+To simplify the process .mra files are provided in the releases folder, that specify the required ROMs with their checksums. The ROMs .zip filename refers to the corresponding file from the MAME project.
 
-Quickreference for folders and file placement:
+Please refer to [Arcade Roms and MRA files](https://mister-devel.github.io/MkDocs_MiSTer/developer/mra/) for information on how to setup and use the environment.
 
+Quick reference for folders and file placement:
+```
 /_Arcade/Crystal Castles.mra
 /_Arcade/cores/CrystalCastles_20221119.rbf
 /_Arcade/mame/ccastles.zip
+```
