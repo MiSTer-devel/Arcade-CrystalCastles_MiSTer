@@ -1,0 +1,30 @@
+set_global_assignment -name SYSTEMVERILOG_FILE Arcade-CrystalCastles.sv
+set_global_assignment -name SDC_FILE Arcade-CrystalCastles.sdc
+
+set_global_assignment -name VERILOG_FILE rtl/CCastles.v
+set_global_assignment -name VERILOG_FILE rtl/Clock.v
+set_global_assignment -name VERILOG_FILE rtl/SyncChain.v
+set_global_assignment -name VERILOG_FILE rtl/Watchdog.v
+set_global_assignment -name VERILOG_FILE rtl/MicroProcessor.v
+set_global_assignment -name VERILOG_FILE rtl/ProgramMemory.v
+set_global_assignment -name VERILOG_FILE rtl/AddresDecoders.v
+set_global_assignment -name VERILOG_FILE rtl/CoinCountOutput.v
+set_global_assignment -name VERILOG_FILE rtl/AutoIncOutput.v
+set_global_assignment -name VERILOG_FILE rtl/AudioOutput.v
+set_global_assignment -name VERILOG_FILE rtl/DynamicRam.v
+set_global_assignment -name VERILOG_FILE rtl/PositionControl.v
+set_global_assignment -name VERILOG_FILE rtl/WorkingRam.v
+set_global_assignment -name VERILOG_FILE rtl/MotionObjectPictureRom.v
+set_global_assignment -name VERILOG_FILE rtl/MotionObjectVerticalControl.v
+set_global_assignment -name VERILOG_FILE rtl/MotionObjectHorizontalControl.v
+set_global_assignment -name VERILOG_FILE rtl/MotionObjectBuffer.v
+set_global_assignment -name VERILOG_FILE rtl/AutoIncrement.v
+set_global_assignment -name VERILOG_FILE rtl/NonVolatileRam.v
+set_global_assignment -name VERILOG_FILE rtl/ColorMemory.v
+
+set_global_assignment -name VERILOG_FILE rtl/TrackballEmu.v
+set_global_assignment -name VERILOG_FILE rtl/SupportChips.v
+set_global_assignment -name VERILOG_FILE rtl/cpu_65c02.v
+set_global_assignment -name VERILOG_FILE rtl/alu.v
+
+set_global_assignment -name QIP_FILE rtl/pokey/pokey.qip
