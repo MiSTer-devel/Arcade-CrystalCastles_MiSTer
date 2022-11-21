@@ -5,7 +5,6 @@ module CCastles
    input         reset_n,
 
    // Game Options
-   input         WDISn,
    input         SELFTEST,
    input         COCKTAIL,
    // Buttons
@@ -62,7 +61,7 @@ Watchdog wd
 (
    .clk(clk), .reset_n(reset_n),
    
-   .WDISn(WDISn),
+   .WDISn(1'b1),
    .WDOGn(WDOGn),
    .VBLANK(VBLANK),
    .WDRESETn(wd_reset_n)
@@ -171,33 +170,35 @@ begin
       end
 end
 
-reg [7:0] vs;
+wire [7:0] vs;
 reg [7:0] vi;
+reg [7:0] vr;
 reg HSYNCd;
 always @(posedge clk or negedge reset_n) 
 begin
    if(~reset_n)
       begin
-        vs <= #1 8'h00;
-        vi <= #1 8'h18;
+        vi <= #1 8'h00;
+        vr <= #1 8'h18;
       end
    else if (~VSLDn)
-        vi <= #1 BD;
+        vr <= #1 BD;
    else
       if (VBLANK)
-         vs <= vi;
+         vi <= vr;
       else 
       begin
          HSYNCd <= #1 HSYNC;
          if (HSYNCd & ~HSYNC)
          begin
             if (PLAYER2)
-               vs <= #1 vs - 8'd1;
+               vi <= #1 vi - 8'd1;
             else
-               vs <= #1 vs + 8'd1;
+               vi <= #1 vi + 8'd1;
             end
       end
 end
+assign vs = vi <= 8'h18 ? 8'h18 : vi;		// limit range to 0x18..0xFF
 
 
 wire [3:0] BIT;

@@ -16,14 +16,12 @@ Vertical: counter 256, visible 232, vsync => 61.03 Hz<br>
 VGA scan doubler working (forced_scandoubler=1 in mister.ini)<br>
 
 ## Known Issues
-Garbage on screen (bottom) when vertical scrolling.<br>
-In cocktail mode, the player 2 upside down screen and sprites are not positioned correctly.<br>
+In cocktail mode the player 2 upside down screen and sprites are not positioned correctly.<br>
 
 ## Todo
 Check sprite horizontal location on actual hardware. <br>
 Keep high-scores, copy NVRAM data back to the MiSTer. <br>
 Use logic analyzer on Atari Potato chip to check scrolling and memory addressing (clamp 0-23 => 24 ???). <br>
-Compute true color outputs from resistor diver network (color output). <br>
 
 ## Controller
 This version can be played with an actual TrackBall connected to the SNAC connector (best experience!).<br>
@@ -64,6 +62,6 @@ Please refer to [Arcade Roms and MRA files](https://mister-devel.github.io/MkDoc
 Quick reference for folders and file placement:
 ```
 /_Arcade/Crystal Castles.mra
-/_Arcade/cores/CrystalCastles_20221119.rbf
+/_Arcade/cores/CrystalCastles_20221121.rbf
 /_Arcade/mame/ccastles.zip
 ```

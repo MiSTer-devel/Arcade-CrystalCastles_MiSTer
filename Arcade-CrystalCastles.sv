@@ -217,7 +217,6 @@ localparam CONF_STR = {
 	"A.CrystalCastles;;",
 	"-;",
 	"O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];",          // status[122:121]
-	"O1,WatchDog,Disable,Enable;",                                          // status[1]
 	"O2,Self Test Mode,Off,On;",                                            // status[2]
 	"O3,Cabinet,Upright,Cocktail;",                                         // status[3]
 	"-;",
@@ -352,7 +351,6 @@ CCastles ccastles
 	.clk(clk_game),
 	.reset_n(~reset),
    
-	.WDISn(status[1]),
    .SELFTEST(status[2]),
    .COCKTAIL(status[3]),
 	
