@@ -4,6 +4,7 @@
 	<setname>ccastles</setname>
 	<mratimestamp>202211191300</mratimestamp>
 	<year>1983</year>
+	<rotation>horizontal</rotation>
 	<manufacturer>Atari</manufacturer>
 	<category>Action / Labyrinth</category>
 	<rbf>CrystalCastles</rbf>
