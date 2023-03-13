@@ -149,7 +149,7 @@ begin
 end
 
 initial begin
-   $readmemh("nvram.rom", mem2);         // nvram content in shadow, game recalls at boot
+   //$readmemh("nvram.rom", mem2);         // nvram content in shadow, game recalls at boot
 end
 
 endmodule   
